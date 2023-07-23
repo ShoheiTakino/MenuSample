@@ -31,11 +31,7 @@
         android:id="@+id/tvMenuUnitRow"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
         android:text="@string/tv_menu_unit"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvMenuPriceRow" />
+        app:layout_constraintStart_toEndOf="@+id/tvMenuPriceRow"
+        app:layout_constraintTop_toTopOf="@+id/tvMenuPriceRow" />
 </androidx.constraintlayout.widget.ConstraintLayout>

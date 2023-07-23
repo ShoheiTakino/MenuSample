@@ -3,6 +3,7 @@ package com.websarva.wings.android.menusample
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Menu
 import android.view.View
 import android.widget.AdapterView
 import android.widget.ListView
@@ -22,6 +23,12 @@ class MainActivity : AppCompatActivity() {
         val adapter = SimpleAdapter(this@MainActivity, _menuList, R.layout.row, _from, _to)
         lvMenu.adapter = adapter
         lvMenu.onItemClickListener = ListItemClickListener()
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        super.onCreateOptionsMenu(menu)
+        menuInflater.inflate(R.menu.menu_options_menu_list, menu)
+        return  true
     }
 
     private fun createTeishokuList(): MutableList<MutableMap<String, Any>> {
